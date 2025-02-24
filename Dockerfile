@@ -22,7 +22,7 @@ VOLUME /root/.ollama
 
 # (Optional) Pre-load a model during build time
 # Uncomment the following line to pre-pull a model like llama3
-RUN ollama pull llama3
+# RUN ollama pull llama3
 
 # Set environment variables (optional)
 ENV OLLAMA_HOST=0.0.0.0
