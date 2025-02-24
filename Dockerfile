@@ -14,9 +14,6 @@ RUN apt-get update && apt-get install -y \
 RUN curl -fsSL https://ollama.com/install.sh | sh
 
 
-# Pre-load a model
-RUN ollama pull llama3
-
 # Expose the default Ollama port
 EXPOSE 11434
 
@@ -25,7 +22,7 @@ VOLUME /root/.ollama
 
 # (Optional) Pre-load a model during build time
 # Uncomment the following line to pre-pull a model like llama3
-# RUN ollama pull llama3
+RUN ollama pull llama3
 
 # Set environment variables (optional)
 ENV OLLAMA_HOST=0.0.0.0
